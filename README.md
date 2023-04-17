@@ -1,1 +1,1 @@
-# funcaotriangulo
+#classe_triangulo
