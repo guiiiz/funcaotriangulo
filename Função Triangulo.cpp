@@ -10,7 +10,7 @@ double calcularAreaTriangulo(double a, double b, double c) {
 
 #include <iostream>
 #include <cmath.h>
-
+//Minha classe e suas variaveis
 class Triangulo {
     private:
     double a,b,c;
@@ -22,16 +22,7 @@ class Triangulo {
 #include <iostream>
 #include <cmath>
 
-class Triangulo {
-    private:
-    double a,b,c;
-    public:
-    Triangulo(double lado1, double lado2, double lado3) {
-        a = lado1;
-        b = lado2;
-        c = lado3;
-    }
-    
+//Calculo da area    
     double calculaArea() {
         double p = (a + b + c) / 2.0;
         double area = std::sqrt(p * (p - a) * (p - b) * (p - c));
@@ -42,7 +33,7 @@ class Triangulo {
     double getLado2() { return b; }
     double getLado3() { return c; }
 };
-
+//Iniciando meu programa
 int main() {
     double a, b, c;
     std::cout << "Digite as medidas dos lados do Triangulo X: ";
@@ -53,12 +44,14 @@ int main() {
     std::cin >> a >> b >> c;
     Triangulo Y(a, b, c);
     
+    //Puxando o calculo da area X e area Y
     double areaX = X.calculaArea();
     double areaY = Y.calculaArea();
     
     std::cout << "Area do Triangulo X: " << areaX << std::endl;
     std::cout << "Area do Triangulo Y: " << areaY << std::endl;
     
+    //Impressão para meu usuário, se o Triangulo X é maior que Y e vice versa, e se ambos tem a mesma area.
     if (areaX > areaY) {
         std::cout << "Triangulo X tem a maior area." << std::endl;
         }
